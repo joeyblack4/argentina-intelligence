@@ -1,0 +1,44 @@
+# Argentina Markets Intelligence Requirements
+
+# Core dependencies
+httpx>=0.27.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+structlog>=23.0.0
+python-dateutil>=2.8.0
+
+# Optional: Anthropic for AI analysis
+anthropic>=0.10.0
+
+# Optional: Twitter API (if not using built-in)
+# twitter-api-v2>=1.16.0
+
+# Optional: Reddit API (if not using built-in)
+# praw>=7.7.0
+
+# Optional: Database support
+# sqlalchemy>=2.0.0
+# psycopg2-binary>=2.9.0  # PostgreSQL
+# sqlite3  # Built-in Python
+
+# Optional: Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Optional: Visualization
+# matplotlib>=3.7.0
+# plotly>=5.15.0
+
+# Development dependencies
+pytest>=7.4.0
+black>=23.0.0
+isort>=5.12.0
+flake8>=6.0.0
+
+# Optional: Advanced NLP
+# nltk>=3.8.0
+# spacy>=3.6.0
+
+# Optional: Additional APIs
+# yfinance>=0.2.0  # Financial data
+# alpha-vantage>=2.3.0  # Market data
