@@ -12,8 +12,23 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 
-from src.translation.translator import translate_text
-from src.config import settings
+# Simple translation function for now
+def translate_text(text):
+    """Simple translation placeholder - in full version would use translation service."""
+    if not text:
+        return ""
+    return text  # For now, return original text
+try:
+    from .config import settings
+except ImportError:
+    # Fallback if config is not properly set up
+    class Settings:
+        x_bearer_token = None
+        anthropic_api_key = None
+        reddit_client_id = None
+        reddit_client_secret = None
+    
+    settings = Settings()
 
 log = structlog.get_logger()
 

@@ -19,9 +19,21 @@ try:
     ANTHROPIC_AVAILABLE = True
 except ImportError:
     ANTHROPIC_AVAILABLE = False
+    # Create dummy anthropic module for when it's not available
+    class anthropic:
+        @staticmethod
+        def Anthropic(api_key=None):
+            return None
 
-from src.collectors.x_api import XTweet, XConversation, ARGENTINA_ACCOUNTS
-from src.config import settings
+from .x_api import XTweet, XConversation, ARGENTINA_ACCOUNTS
+try:
+    from .config import settings
+except ImportError:
+    # Fallback if config is not properly set up
+    class Settings:
+        anthropic_api_key = None
+    
+    settings = Settings()
 
 log = structlog.get_logger()
 

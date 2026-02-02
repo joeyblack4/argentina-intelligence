@@ -17,8 +17,8 @@ from pathlib import Path
 from typing import Optional, List, Dict, Any
 from urllib.parse import quote_plus
 
-from src.collectors.x_api import XAPIClient, XTweet, ARGENTINA_ACCOUNTS
-from src.analysis.x_summarizer import XSummarizer, XSentimentReport
+from .x_api import XAPIClient, XTweet, ARGENTINA_ACCOUNTS
+from .x_summarizer import XSummarizer, XSentimentReport
 from src.config import settings
 
 log = structlog.get_logger()

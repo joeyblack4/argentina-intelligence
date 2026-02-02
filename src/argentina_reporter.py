@@ -13,9 +13,9 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 
-from src.collectors.social_collector import SocialIntelligenceCollector, SocialIntelligence
-from src.collectors.x_api import XAPIClient
-from src.analysis.x_summarizer import XSummarizer
+from .social_collector import SocialIntelligenceCollector, SocialIntelligence
+from .x_api import XAPIClient
+from .x_summarizer import XSummarizer
 from src.config import settings
 
 log = structlog.get_logger()
